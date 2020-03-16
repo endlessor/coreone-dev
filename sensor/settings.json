@@ -1,0 +1,7 @@
+{
+  "host": "akc28iu7dn5ra-ats.iot.eu-west-1.amazonaws.com",
+  "keyPath": "./certs/sensor-1584351248269-private.pem.key",
+  "certPath": "./certs/sensor-1584351248269-certificate.pem.crt",
+  "caPath": "./certs/AmazonRootCA1.pem",
+  "clientId": "sensor-1584351248269"
+}

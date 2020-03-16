@@ -1,0 +1,26 @@
+type Sensor @model (subscriptions: null)
+@auth (
+    rules: [
+        { allow: private, provider: iam},
+        { allow: private, provider: userPools}
+    ]
+) 
+{
+  id: ID!
+  deviceId: String!
+  deviceType: String!
+  temperature: Float!
+  state: Boolean!
+  pressure: Float!
+  flow: Float!
+  energy: Float!
+  uv: Float!
+  longitude: Float!
+  latitude: Float!
+  timestamp: AWSTimestamp!
+}
+
+type Subscription {
+  onUpdateSensor(id: ID!): Sensor @aws_subscribe(mutations: ["updateSensor"])
+  onUpdateSensors: Sensor @aws_subscribe(mutations: ["updateSensor"])
+}

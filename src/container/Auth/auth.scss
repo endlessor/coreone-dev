@@ -1,0 +1,76 @@
+
+/* Layout */
+.Container{
+  max-width: 800px;
+  margin: 0 auto;
+}
+.Container--lg{
+  max-width: 1000px;
+}
+.Container--md{
+  max-width: 600px;
+}
+.Container--sm{
+  max-width: 400px;
+}
+.Container--side-padding{
+  padding: 0 16px;
+}
+.gray-bg{
+  background: #eaeaea;
+}
+
+/* Form elements */
+input, button, textarea, .cta-btn{
+  width: 100%;
+  padding: 16px;
+  font-size: 16px;
+  margin: 4px 0;
+  border: 1px solid #eaeaea;
+  border-radius: 4px;
+  -webkit-appearance: none;
+}
+button,
+.cta-btn{
+  background: #f22f52;
+  border: none;
+  color: #f9f9f9;
+  cursor: pointer;
+}
+.cta-btn{
+  display: inline-block;
+  width: auto;
+  padding: 16px 40px;
+}
+input:disabled,
+button:disabled {
+  opacity: 0.6;
+}
+.btn-secondary{
+  border: 1px solid #777;
+  color: #444;
+  background: #fff;
+  padding: 8px 16px;
+  font-size: 12px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.sm-form{
+  text-align: center;
+  padding: 8vh 16px;
+  animation: fade-in-up ease 0.8s forwards;
+}
+.sm-form h3{
+  margin-bottom: 16px;
+}
+.link-btn{
+  background: 0;
+  padding: 0;
+  margin: 0;
+  width: auto;
+  font-size: inherit;
+  cursor: pointer;
+}
+.form-field{
+  margin: 16px 0;
+}

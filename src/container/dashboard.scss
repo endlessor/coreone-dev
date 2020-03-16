@@ -1,0 +1,423 @@
+.dashboard-wrapper
+{
+	max-height: 100%;
+	overflow-y: auto;
+	padding-bottom: 50px;
+}
+.dashboard-content
+{
+	padding: 15px 15px;
+	position: relative;
+	max-width: 1410px;
+	height: 100%;
+	margin: auto;
+
+	.row
+	{
+		margin: 0;
+
+		& > div
+		{
+			padding: 10px;
+		}
+	}
+}
+.header-center-text {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: gray;
+}
+.dashboard-card
+{
+	background: #f5f5f5;
+	border-radius: 3px;
+	box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.1);
+	padding: 15px 10px;
+	position: relative;
+}
+.dashboard-card__header
+{
+	text-align: center;
+	color: #999;
+}
+.temperature-card .slider-wrapper
+{
+	height: 350px;
+	position: absolute;
+	right: 20px;
+	top: calc(50% - 175px);
+}
+.temperature-card .slider-mark, .new-scheduler-slider-mark
+{
+	position: relative;
+	right: 18px;
+	font-weight: 200;
+	font-size: 13px;
+}
+.mark-top
+{
+	bottom: 20px;
+}
+.mark-bottom
+{
+	top: 20px;
+}
+.temperature-card .dashboard-card__body
+{
+	position: absolute;
+	top: calc(50% - 80px);
+	text-align: center;
+	width: calc(100% - 20px);
+}
+.dashboard-card__value
+{
+	font-weight: 200;
+	font-size: 60px;
+	display: inline-block;
+	margin-top: 15px;
+}
+.temperature-card .set-value
+{
+	opacity: 1;
+	font-size: 80px;
+}
+.temperature-celcius
+{
+	font-size: 60px;
+	position: relative;
+	top: -20px;
+	left: -20px;
+}
+.toggle-btn
+{
+	margin-top: 25px;
+	display: inline-block;
+	cursor: pointer;
+	padding: 7px 5px 1px 5px;
+	box-sizing: border-box;
+	border-radius: 50%;
+	box-shadow: 0 1px 1px rgba(27,31,35,.1) !important;
+	transition: opacity 300ms linear;
+}
+.toggle-btn:hover
+{
+	opacity: 0.8;
+}
+.toggle-btn .material-icons
+{
+	color: white !important;
+	font-size: 35px !important;
+}
+.current-temperature
+{
+	color: #999;
+	font-size: 17px;
+}
+
+.set-value.blink
+{
+	animation: blink 1000ms infinite ease-in-out;
+}
+
+@keyframes blink {
+	0% {opacity: 1;}
+	50% {opacity: 0.2;}
+	100% {opacity: 1;}
+}
+.location-card
+{
+	padding: 0;
+}
+
+.schedule-wrapper
+{
+	font-family: 'Fira Sans', sans-serif;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	padding-left: 10.5px;
+	padding-right: 10.5px;
+	position: relative;
+
+	.scheduler-toolbar
+	{
+		display: flex;
+		justify-content: space-between;
+		padding-top: 20px;
+		border-bottom: 1px solid #eee;
+		padding-bottom: 20px;
+		margin-left: -10.5px;
+		margin-right: -10.5px;
+
+		.add-data-btn
+		{
+			background: white;
+			border: 1px solid #777;
+			color: black;
+			border-radius: 30px;
+			padding: 2px 10px;
+			cursor: pointer;
+			margin-right: 15px;
+			text-transform: none;
+
+			i
+			{
+				vertical-align: -1px;
+			}
+		}
+
+		.week-switcher
+		{
+			display: flex;
+
+			.current-week
+			{
+				font-size: 20px;
+			}
+
+			.icon
+			{
+				width: 2.5rem;
+				text-align: center;
+				font-size: 1.25rem;
+				height: auto;
+				line-height: 25px;
+
+				i
+				{
+					color: #333;
+				}
+
+				i:hover
+				{
+					opacity: 0.8;
+					cursor: pointer;
+				}
+			}
+		}
+	}
+
+	.scheduler-data-wrapper
+	{
+		overflow-x: scroll;
+		width: 100%;
+
+		&::-webkit-scrollbar
+		{
+			height: 5px;
+		}
+		&::-webkit-scrollbar-thumb
+		{
+			background-color: #ccc;
+		}
+	}
+
+	div
+	{
+		height: 100%;
+	}
+
+	div.scheduler-day
+	{
+		height: 56px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #ccc;
+		position: relative;
+	}
+
+	.scheduler-days-headers
+	{
+		height: auto;
+		position: absolute;
+		z-index: 50;
+		display: flex;
+		flex-direction: column;
+
+		.day-header
+		{
+			font-size: 14px;
+			background: #f5f5f5;
+			line-height: 56px;
+			height: 56px;
+		}
+	}
+	.scheduler-range
+	{
+		position: absolute;
+		z-index: 5;
+		top: 0;
+		padding-top: 13px;
+		padding-bottom: 13px;
+		text-align: center;
+
+		.range-label
+		{
+			position: relative;
+			border-radius: 15px;
+			line-height: 31px;
+			color: white;
+			background: #ffa36b;
+			display: flex;
+			justify-content: center;
+
+			&.turned-off
+			{
+				background: #ccc;
+
+				.range-actions
+				{
+					background: #ccc;
+				}
+			}
+
+			.range-actions
+			{
+				border-radius: 15px;
+				background: #ffa36b;
+				position: absolute;
+				top: 0;
+				display: flex;
+
+				.icon
+				{
+					width: 2.5rem;
+					text-align: center;
+					font-size: 2.3rem;
+					height: auto;
+					line-height: 25px;
+
+					i:hover
+					{
+						cursor: pointer !important;
+					}
+				}
+
+			}
+
+			&:not(:hover)
+			{
+				.range-actions
+				{
+					display: none;
+				}
+			}
+		}
+	}
+
+	.scheduler-timeline
+	{
+		display: flex;
+		justify-content: space-between;
+		padding: 15px 15px 15px 45px;
+
+		.timeline-point
+		{
+			display: flex;
+			text-align: center;
+
+			div
+			{
+				width: 30px;
+			}
+
+			.hour
+			{
+				font-size: 11px;
+			}
+
+			.minute
+			{
+				color: #999;
+				margin-top: 15px;
+				font-size: 10px;
+			}
+
+		}
+	}
+}
+
+.add-range-btn
+{
+	display: inline-block;
+	position: absolute;
+	right: 15px;
+	top: 12px;
+}
+
+.day
+{
+	display: inline-block;
+	border-radius: 50%;
+	background: #aaa;
+	font-size: 14px;
+	padding: 8px 12px;
+	width: 35px;
+	text-align: center;
+	color: white;
+
+	&.active
+	{
+		box-shadow: 0 1px 1px rgba(27,31,35,.1) !important;
+		background: #ee8252;
+	}
+}
+
+.MuiDialog-paperWidthXs
+{
+	max-width: 350px !important;
+}
+
+.temperature-slider
+{
+	font-weight: 200;
+}
+.temperature-slider-digit
+{
+	width: 26px;
+	display: inline-block;
+}
+.main-value
+{
+	color:#ee8252;
+	text-align: center;
+	padding: 15px;
+	font-size: 50px;;
+}
+
+.new-scheduler-slider-mark
+{
+	top: -18px;
+
+	&.right
+	{
+		right: 0;
+		left: 30px;
+	}
+
+	&.left
+	{
+		right: 20px;
+	}
+}
+
+.new-schedule-time
+{
+	.MuiInput-underline:after, .MuiInput-underline:before, .MuiSelect-icon
+	{
+		display: none;
+	}
+
+	.MuiSelect-select
+	{
+		padding: 0;
+	}
+
+	.MuiInputBase-root
+	{
+		border: 1px solid #ccc;
+		padding: 10px 25px;
+		border-radius: 20px;
+	}
+}

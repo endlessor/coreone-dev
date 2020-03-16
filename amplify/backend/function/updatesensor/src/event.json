@@ -1,0 +1,15 @@
+{
+    "deviceId": "6e9d0cc7-e109-4f69-bf38-0275f200a021",
+    "data": {
+        "deviceType": "sensor-1",
+        "temperature": 81,
+        "state": true, 
+        "pressure": 4,
+        "flow": 5,
+        "energy": 12,
+        "uv": 24,
+        "longitude": 23,
+        "latitude": 45,
+        "timestamp": 1579374362000
+    }
+}

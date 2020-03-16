@@ -1,0 +1,144 @@
+@import "./container/Auth/auth.scss";
+@import "./container/dashboard.scss";
+
+body {
+  margin: 0;
+  font-family: "Fira Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+#root {
+  overflow: hidden;
+}
+.main-header {
+  height: 50px;
+  box-shadow: 1px 0 5px rgba(0, 0, 0, 0.1);
+  display: flex;
+  width: 100%;
+  padding: 10px 25px;
+  line-height: 30px;
+}
+.secondary {
+  color: #999;
+}
+.font-light {
+  font-weight: 200;
+}
+.font-12 {
+  font-size: 12px;
+}
+.font-13 {
+  font-size: 13px;
+}
+.text-center {
+  text-align: center;
+}
+.text-right {
+  text-align: right;
+}
+.color-main {
+  color: #ee8252;
+}
+.color-blue {
+  color: #4f82e9;
+}
+.color-yellow {
+  color: #f8d700;
+}
+.color-red {
+  color: #eb5e54;
+}
+.hover-opacity {
+  cursor: pointer;
+  transition: opacity 300ms;
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
+* {
+  box-sizing: border-box;
+}
+hr {
+  opacity: 0.2;
+}
+button[disabled] {
+  pointer-events: none;
+  opacity: 0.4;
+}
+
+.profile {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.device-list {
+		cursor: pointer;
+		display: flex;
+
+		div {
+			padding-top: 4px;
+		}
+
+	}
+  .name {
+    font-size: 16px;
+    max-width: 70%;
+    overflow: hidden;
+    display: flex;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+		cursor: pointer;
+		margin-left: 20%;
+		div {
+			padding-top: 4px;
+		}
+  }
+}
+
+.MuiTextField-root.app-style {
+  width: 100%;
+
+  .MuiInputLabel-formControl {
+    &.MuiInputLabel-shrink {
+      top: -5px;
+      left: 2px;
+    }
+
+    top: -12px;
+    font-size: 13px;
+  }
+
+  .MuiInputBase-root,
+  .MuiInputBase-root {
+    margin-top: 8px;
+    font-size: 13px;
+
+    &::before,
+    &::after {
+      display: none;
+    }
+
+    .MuiInput-input {
+      padding: 3px !important;
+    }
+  }
+}
+
+.with-spinner .MuiCircularProgress-root {
+  position: absolute;
+  margin-left: -20px;
+}
+
+.main-header {
+  .text-center {
+    img {
+      width: 100px;
+    }
+  }
+}

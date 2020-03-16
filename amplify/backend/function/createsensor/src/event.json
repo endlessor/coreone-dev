@@ -1,0 +1,13 @@
+{
+    "deviceId": "sensor-2",
+    "deviceType": "sensor-1",
+    "temperature": 81,
+    "state": true, 
+    "pressure": 4,
+    "flow": 5,
+    "energy": 12,
+    "uv": 24,
+    "longitude": 23,
+    "latitude": 45,
+    "timestamp": 1579374362000
+}

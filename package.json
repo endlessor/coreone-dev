@@ -1,0 +1,47 @@
+{
+	"name": "coreone-web",
+	"version": "0.1.0",
+	"private": true,
+	"dependencies": {
+		"@material-ui/core": "^4.1.1",
+		"aws-amplify": "^2.2.6",
+		"aws-amplify-react": "^3.1.6",
+		"echarts": "^4.2.1",
+		"echarts-for-react": "^2.0.15-beta.0",
+		"google-maps-react": "^2.0.2",
+		"localforage": "^1.7.3",
+		"material-icons-react": "^1.0.4",
+		"node-sass": "^4.12.0",
+		"rc-slider": "^8.6.12",
+		"react": "^16.8.6",
+		"react-dom": "^16.8.6",
+		"react-redux": "^7.1.0",
+		"react-router-dom": "^5.0.1",
+		"react-scripts": "3.0.1",
+		"redux": "^4.0.1",
+		"redux-thunk": "^2.3.0",
+		"typescript": "^3.8.3"
+	},
+	"scripts": {
+		"start": "react-scripts start",
+		"build": "react-scripts build",
+		"test": "react-scripts test",
+		"eject": "react-scripts eject",
+		"deploy": "npm run build && aws s3 rm s3://coreone-website --recursive --profile coreone && aws s3 cp build s3://coreone-website --profile coreone --recursive --metadata-directive REPLACE --cache-control max-age=1,s-maxage=1"
+	},
+	"eslintConfig": {
+		"extends": "react-app"
+	},
+	"browserslist": {
+		"production": [
+			">0.2%",
+			"not dead",
+			"not op_mini all"
+		],
+		"development": [
+			"last 1 chrome version",
+			"last 1 firefox version",
+			"last 1 safari version"
+		]
+	}
+}
