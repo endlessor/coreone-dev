@@ -6,7 +6,7 @@
   "license": "Apache-2.0",
   "dependencies": {
     "aws-appsync": "^2.0.0",
-    "cross-fetch": "^3.0.4",
+    "cross-fetch": "^3.1.5",
     "graphql": "^14.5.5",
     "graphql-tag": "^2.10.1"
   }
